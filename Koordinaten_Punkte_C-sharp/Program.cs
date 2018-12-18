@@ -9,40 +9,20 @@ namespace Koordinaten_Punkte_C_sharp
 {
 	
 
-	class CPunkt
-	{
-		//private static object p;
-		//private static object b;
+	//class CPunkt
+	//{
+	//	//private static object p;
+	//	//private static object b;
 
-		//Var
+	//	//Var
 
-		//private int X;
-		//private int Y;
+	//	//private int X;
+	//	//private int Y;
 
-		// getter und setter
-		public double X { get; internal set; }
-		public double Y { get; internal set; }
 		
-		// Parameterkonstruktor (double X, double Y)
-		public CPunkt(double X, double Y)
-		{
-			// Fall CPunkt a = new CPunkt(10, 20);
-		}
 		
-		// Standardkonstruktor
-		public CPunkt()
-		{ 
-			// FALL B CPunkt c = new CPunkt();
-		}
-
-		// Parameterkonsruktor (CPunkt p)		
-		public CPunkt(CPunkt p)
-		{
-			return;
-		}
-		
-	}
-	/* PROTOTYP
+	//}
+	/* DELETE following 11.Lines 
 	internal class Abstand
 	{
 		double abstand;
@@ -56,32 +36,9 @@ namespace Koordinaten_Punkte_C_sharp
 	// private float AbstandUrsprung (CPunkt)
 
 	*/
-	internal class Abstand
+	internal class CAbstand
 	{
-		double quadratabstand;
-		double abstand;
-		// die Parameter auf CPunkt _,  reduzieren oder Polymorphie nutzen oder Umwandeln, bzw. get nutzen...
-		private double AbstandUrsprung (double x, double y)
-		{
-			//  Quatsch ... (-) * (-) = + ... -> keine Fallunterscheid. notw.
-			quadratabstand =  ( x * x ) + ( y * y );
-			
-			
-			abstand = Math.Sqrt(quadratabstand);
-			return abstand;
-			// sollte was zurückgeben:   return  ;
 		
-			//  Konstruktor Aufruf wandert in die Main ---> CPunkt Ursrpung = new CPunkt (0,0);
-		}
-
-		private double AbstandUrsprung (CPunkt p) // TODO: 
-		{
-			quadratabstand = ( p.X * p.X ) + (p.Y * p.Y );
-			abstand = Math.Sqrt(quadratabstand);
-			return abstand;
-		
-		//  Konstruktor Aufruf wandert in die Main ---> CPunkt Ursrpung = new CPunkt (0,0);
-		}
 
 	}
 	
@@ -91,20 +48,20 @@ namespace Koordinaten_Punkte_C_sharp
 		static void Main(string[] args)
 		{
 		// Konstruktoren werden Aufgerufen
-		CPunkt a = new CPunkt(10, 20);
-		CPunkt b = new CPunkt(a);
+			C_Punkt a = new C_Punkt(10, 20);
+			C_Punkt b = new C_Punkt(a);
 		
-		CPunkt c = new CPunkt	// das "();" wurde von IntelliSense gegen {}-Klammern um die X,Y Zuweisung ausgetauscht...
+			C_Punkt c = new C_Punkt	// das "();" wurde von IntelliSense gegen {}-Klammern um die X,Y Zuweisung ausgetauscht...
 		{
 			X = 30, //aufruf der Methode zum erzeugen der XPosition
 			Y = 40  // YPosition
 		};
 
 		// und hier der Aufruf des Konstruktors für die Abstandsbestimmung
-		CPunkt Ursprung = new CPunkt (0,0);
+			C_Punkt Ursprung = new C_Punkt (0,0);
 
 			Console.WriteLine("Punkt B<" + b.X + "|" + b.Y +">");
-			//Console.WriteLine("Abstand von Punkt b zu <0|0>: " + b.Abstand());
+			Console.WriteLine("Abstand von Punkt b zu <0|0>: " + b.Abstand(b));
 
 		// Beim Debugging (schrittweise) wird deutlich, dass die Ausgabe (Auskommentiert s.u.)
 		// auf der Console , die GETTER-Methode nutzt um auf die Werte zuzugreifen! 
