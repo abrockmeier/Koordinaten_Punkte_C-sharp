@@ -31,7 +31,7 @@ namespace Koordinaten_Punkte_C_sharp
 		// Parameterkonsruktor (CPunkt p)		
 		public C_Punkt(C_Punkt p)
 		{
-			this.X = X;
+			this.X = X; //  TODO! TRY: p.X Im Bezug auf die Übergabe aus der main für B...
 			this.Y = Y;
 			/*
 			// geschummelt!

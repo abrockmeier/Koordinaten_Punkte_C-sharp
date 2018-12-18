@@ -62,6 +62,7 @@ namespace Koordinaten_Punkte_C_sharp
 			//C_Punkt Ursprung = new C_Punkt (0,0);
 			Console .WriteLine("Punkt A<" + a.X + "|" + a.Y +">");
 			Console.WriteLine("Punkt B<" + b.X + "|" + b.Y +">");
+			Console.WriteLine("Punkt C<" + c.X + "|" + c.Y +">");
 			Console.WriteLine("Abstand von Punkt b zu <0|0>: " + b.Abstand(b));
 
 		// Beim Debugging (schrittweise) wird deutlich, dass die Ausgabe (Auskommentiert s.u.)
