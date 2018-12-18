@@ -35,12 +35,13 @@ namespace Koordinaten_Punkte_C_sharp
 	
 	// private float AbstandUrsprung (CPunkt)
 
-	*/
+	
 	internal class CAbstand
 	{
 		
 
 	}
+	*/
 	
 
 	class Program
@@ -49,7 +50,7 @@ namespace Koordinaten_Punkte_C_sharp
 		{
 		// Konstruktoren werden Aufgerufen
 			C_Punkt a = new C_Punkt(10, 20);
-			C_Punkt b = new C_Punkt(a);
+			C_Punkt b =  a; //a statt "new C_Punkt(a);"
 		
 			C_Punkt c = new C_Punkt	// das "();" wurde von IntelliSense gegen {}-Klammern um die X,Y Zuweisung ausgetauscht...
 		{
@@ -58,8 +59,8 @@ namespace Koordinaten_Punkte_C_sharp
 		};
 
 		// und hier der Aufruf des Konstruktors für die Abstandsbestimmung
-			C_Punkt Ursprung = new C_Punkt (0,0);
-
+			//C_Punkt Ursprung = new C_Punkt (0,0);
+			Console .WriteLine("Punkt A<" + a.X + "|" + a.Y +">");
 			Console.WriteLine("Punkt B<" + b.X + "|" + b.Y +">");
 			Console.WriteLine("Abstand von Punkt b zu <0|0>: " + b.Abstand(b));
 

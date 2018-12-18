@@ -16,26 +16,38 @@ namespace Koordinaten_Punkte_C_sharp
 		public C_Punkt(double X, double Y)
 		{
 			// Fall CPunkt a = new CPunkt(10, 20);
+			this.X = X;
+			this.Y = Y;
 		}
 		
 		// Standardkonstruktor
 		public C_Punkt()
 		{ 
+			this.X = X;
+			this.X = Y;
 			// FALL B CPunkt c = new CPunkt();
 		}
 
 		// Parameterkonsruktor (CPunkt p)		
 		public C_Punkt(C_Punkt p)
 		{
-			return;
+			this.X = X;
+			this.Y = Y;
+			/*
+			// geschummelt!
+			C_Punkt b = new C_Punkt(10, 20);
+			//return;
+			*/
 		}
 
 		//Abstand aus Klasse_Abstand
 		double quadratabstand;
 		double abstand;
+		/*
 		readonly double x;
 		// die Parameter auf CPunkt _,  reduzieren oder Polymorphie nutzen oder Umwandeln, bzw. get nutzen...
-		public double Abstand (double x, double y)
+		
+		 * public double Abstand (double x, double y)
 		{
 			//  Quatsch ... (-) * (-) = + ... -> keine Fallunterscheid. notw.
 			quadratabstand =  ( x * x ) + ( y * y );
@@ -48,7 +60,7 @@ namespace Koordinaten_Punkte_C_sharp
 		
 			//  Konstruktor Aufruf wandert in die Main ---> CPunkt Ursrpung = new CPunkt (0,0);
 		}
-
+		*/
 		public double Abstand (C_Punkt p) // 
 		{
 			quadratabstand = ( p.X * p.X ) + (p.Y * p.Y );
